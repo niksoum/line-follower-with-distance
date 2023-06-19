@@ -1,5 +1,5 @@
 {
-    "name": "line follower with distance",
+    "name": "line follower",
     "description": "",
     "dependencies": {
         "core": "*",
