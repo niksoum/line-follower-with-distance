@@ -6,7 +6,8 @@ function ΑΡΙΣΤΕΡΑ_ () {
     maqueen.motorRun(maqueen.Motors.M2, maqueen.Dir.CW, 40)
 }
 function ΠΙΣΩ () {
-    maqueen.motorRun(maqueen.Motors.All, maqueen.Dir.CCW, 100)
+    maqueen.motorRun(maqueen.Motors.All, maqueen.Dir.CCW, 51)
+    basic.pause(500)
 }
 function ΔΕΞΙΑ_ () {
     maqueen.motorRun(maqueen.Motors.M2, maqueen.Dir.CCW, 30)
@@ -26,7 +27,12 @@ basic.forever(function () {
                 if (maqueen.readPatrol(maqueen.Patrol.PatrolLeft) == 0 && maqueen.readPatrol(maqueen.Patrol.PatrolRight) == 1) {
                     ΑΡΙΣΤΕΡΑ_()
                 } else {
-                    ΣΤΑΜΑΤΑ()
+                    if (maqueen.readPatrol(maqueen.Patrol.PatrolLeft) == 1 && maqueen.readPatrol(maqueen.Patrol.PatrolRight) == 1) {
+                        ΣΤΑΜΑΤΑ()
+                        ΠΙΣΩ()
+                    } else {
+                        ΣΤΑΜΑΤΑ()
+                    }
                 }
             }
         }

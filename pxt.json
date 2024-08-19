@@ -1,5 +1,5 @@
 {
-    "name": "line follower",
+    "name": "line follower - Copy",
     "description": "",
     "dependencies": {
         "core": "*",
@@ -17,7 +17,7 @@
         "test.ts"
     ],
     "targetVersions": {
-        "target": "6.0.15",
+        "target": "6.0.28",
         "targetId": "microbit"
     },
     "supportedTargets": [
